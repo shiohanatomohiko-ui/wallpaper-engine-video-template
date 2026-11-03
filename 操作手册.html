@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>视频壁纸模板 · 操作手册</title>
+  <style>
+    :root{color-scheme:light;--ink:#24332d;--muted:#54655c;--line:#dce4dd;--accent:#285b46;--paper:#fff;--wash:#f2f6f2}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font-family:"Microsoft YaHei UI","Microsoft YaHei","Segoe UI",sans-serif;line-height:1.8;font-size:16px}
+    main{max-width:1050px;margin:36px auto;padding:42px 52px;background:var(--paper);border:1px solid var(--line);border-radius:16px}
+    header{border-bottom:2px solid var(--accent);padding-bottom:24px;margin-bottom:28px}.eyebrow{color:var(--accent);letter-spacing:.12em;font-size:13px;font-weight:700}h1{margin:8px 0 12px;font-size:34px;line-height:1.4}h2{font-size:23px;margin:40px 0 14px;line-height:1.5}h3{font-size:18px;margin:22px 0 8px}
+    p{margin:10px 0}a{color:var(--accent);text-underline-offset:3px}nav{background:var(--wash);padding:16px 20px;border-radius:8px}nav a{display:inline-block;margin:3px 18px 3px 0}.meta,.small{font-size:14px;color:var(--muted)}
+    .lead{font-size:18px;max-width:48em}.note{border-left:4px solid var(--accent);padding:12px 18px;background:var(--wash);margin:20px 0}.note p{margin:4px 0}ol,ul{padding-left:25px}li{margin:8px 0}li p{margin:4px 0}
+    code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:.93em;background:#edf2ee;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}pre{padding:16px 18px;background:#f6f8f6;border:1px solid var(--line);border-radius:8px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.7;font-size:14px}
+    .table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px;margin:14px 0}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:10px 12px}th{background:var(--wash);font-weight:700}td:first-child{width:24%;font-weight:600}footer{border-top:1px solid var(--line);margin-top:36px;padding-top:18px;color:var(--muted);font-size:13px}
+    @media(max-width:650px){body{font-size:15px}main{margin:0;padding:24px 20px;border:0;border-radius:0}h1{font-size:27px}h2{font-size:21px}th,td{padding:8px 7px}nav a{margin-right:13px}.lead{font-size:17px}}
+    @media print{@page{size:A4;margin:17mm}body{background:#fff;font-size:10.5pt;line-height:1.65}main{max-width:none;margin:0;padding:0;border:0;border-radius:0}header{padding-bottom:12px;margin-bottom:16px}h1{font-size:24pt}h2{font-size:16pt;margin-top:24px;break-after:avoid}h3{font-size:12pt;break-after:avoid}nav{display:none}table{font-size:9pt}tr,.note{break-inside:avoid}a{color:inherit}pre{font-size:9pt}footer{font-size:9pt}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">WALLPAPER ENGINE · VIDEO TEMPLATE</div>
+    <h1>视频壁纸模板操作手册</h1>
+    <p class="lead">下载模板，准备一次制作工具，再选择新视频并安装为独立项目。循环播放、鼠标视差和立体时钟已经配好，换素材无需改代码。</p>
+    <p class="meta">2026-11-03 · 面向 Wallpaper Engine 2.8.42 Steam 版 · 本手册离线可读，可用浏览器打印</p>
+  </header>
+  <nav aria-label="手册目录">
+    <a href="#quick">快速开始</a><a href="#source">选择素材</a><a href="#settings">调整效果</a><a href="#update">更新已有作品</a><a href="#files">文件结构</a><a href="#check">检查与排错</a><a href="#workshop">创意工坊</a>
+  </nav>
+
+  <section id="quick">
+    <h2>1. 制作一张新的视频壁纸</h2>
+    <ol>
+      <li><strong>下载并完整解压。</strong>在 GitHub 仓库选择 <code>Code → Download ZIP</code>，或下载提供的 ZIP 项目包。解压到本地文件夹，不要直接在压缩包中运行程序。</li>
+      <li><strong>首次准备制作工具。</strong>联网双击 <code>准备制作工具.cmd</code>，等待 FFmpeg / ffprobe 下载及校验完成。工具保存在模板内，不需要系统安装；准备好后可断网制作。</li>
+      <li><strong>复制准备好的整个模板文件夹。</strong>给副本起一个容易区分的名称，例如“海边日落壁纸”。每个视频使用一个独立工作文件夹，保留一份模板备用。</li>
+      <li><strong>导入新视频。</strong>双击副本中的 <code>替换视频.cmd</code>，在文件选择窗口中选中源视频；也可以把一个视频文件拖到该程序上。</li>
+      <li><strong>等待成功提示。</strong>工具生成本地播放用的视频，并同步生成启动海报和列表预览图。转换期间不要关闭工具。MP4 等素材需要转码，4K 长片可能需要较长时间。</li>
+      <li><strong>安装为独立项目。</strong>双击 <code>安装为新项目.cmd</code>。工具查找 Steam 库，在 Wallpaper Engine 的 <code>projects\myprojects</code> 下建立唯一的新目录。记下工具显示的完整路径。</li>
+      <li><strong>在 Wallpaper Engine 中选择它。</strong>打开“已安装”列表，选择新项目。若没有出现，关闭再打开壁纸选择器刷新；仍未出现时，用壁纸编辑器打开工具所示目录中的 <code>project.json</code>，确认预览后再到列表中选择。</li>
+    </ol>
+    <div class="note"><p><strong>安装工具只准备文件。</strong>它不会切换你的当前桌面，也不会上传。运行壁纸后不需要让转换工具继续开着。</p></div>
+    <p><strong>联网只用于首次取得制作工具。</strong>换视频处理在本地进行，壁纸运行不依赖网络。只想先安装随附演示壁纸时，可以直接运行“安装为新项目.cmd”，无需下载 FFmpeg。</p>
+    <p>自动安装找不到 Wallpaper Engine 时，可将 <code>wallpaper</code> 文件夹复制到实际安装位置的 <code>projects/myprojects/</code> 下，并给该副本起一个独立新目录名。只复制壁纸项目，<code>tools</code> 和备份不要放进去。</p>
+    <p>如果希望修改作品名称，在 Wallpaper Engine 编辑器中修改该新项目的标题即可。视频替换本身不需要编辑代码。</p>
+  </section>
+
+  <section id="source">
+    <h2>2. 选择合适的视频</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>项目</th><th>要求或行为</th></tr></thead>
+      <tbody>
+        <tr><td>时长与色彩</td><td>使用至少 <strong>2 秒</strong>的 SDR 视频。不要直接使用 HDR 素材；先在你的视频软件中导出 SDR 版本。</td></tr>
+        <tr><td>格式</td><td>固定运行入口为 <code>wallpaper/assets/video.webm</code>。符合兼容条件的 VP8/VP9 WebM 可快速复制视频流；MP4 等格式由工具实际转换为 VP9 WebM。<strong>改扩展名不会转换格式。</strong></td></tr>
+        <tr><td>分辨率与帧率</td><td>不强制放大到4K，不插帧。常规素材保留尺寸与帧率，特殊像素比例或奇数尺寸会作兼容性规范化。不会增加原片没有的细节；16:9、3840×2160最适合4K桌面。</td></tr>
+        <tr><td>音频</td><td>输出去除音频，壁纸默认静音。无需额外关闭播放器声音。</td></tr>
+        <tr><td>其他比例</td><td>自动保持比例并居中 cover 覆盖屏幕，预留视差余量，不会拉伸。竖屏、超宽视频或与屏幕不同的比例会有裁切。</td></tr>
+        <tr><td>首尾衔接</td><td>双播放器提前准备下一轮，再短暂淡入。首尾姿态或镜头差异过大时仍会看出变化；模板不能把任意视频变成完全无缝循环。</td></tr>
+      </tbody>
+    </table></div>
+    <p>模板不自动识别人脸或主体。新视频的主体靠近边缘时，检查裁切与视差；时钟挡住人物时，在 Wallpaper Engine 属性中换位置或缩小窗口。</p>
+    <p>原视频文件不会被改写。转换先生成临时结果，成功后再替换工作副本中的素材；失败时保留旧素材。备份放在 <code>wallpaper</code> 之外，不会混入壁纸发布包。</p>
+    <p>要恢复<strong>工作副本</strong>，从 <code>backups/时间戳/</code> 中选择所需备份，把其中的 <code>assets/video.webm</code>、<code>assets/poster.jpg</code>、<code>preview.jpg</code> 和 <code>project.json</code> 放回 <code>wallpaper</code> 的同名位置。此步骤只恢复工作副本；更新已发布项目请按第4节操作，保留已发布项目自己的 <code>project.json</code>。</p>
+  </section>
+
+  <section id="settings">
+    <h2>3. 在 Wallpaper Engine 中调整效果</h2>
+    <p>选中壁纸后，使用右侧的用户属性。普通浏览器中没有 Wallpaper Engine 的属性面板。</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>设置</th><th>默认值 / 范围</th><th>用途</th></tr></thead>
+      <tbody>
+        <tr><td>启用鼠标视差</td><td>开启</td><td>背景根据鼠标连续位置轻微反向移动。</td></tr>
+        <tr><td>视差强度</td><td>100%；0–200%</td><td>调节背景最大移动幅度。素材贴边时可以降低。</td></tr>
+        <tr><td>平滑程度</td><td>120ms；60–300ms</td><td>越大越柔和，响应也更缓。</td></tr>
+        <tr><td>显示时间窗口</td><td>开启</td><td>隐藏时钟，保留视频和背景视差。</td></tr>
+        <tr><td>时间窗口不透明度</td><td>44%；5–95%</td><td>数值越低，背景越透明。</td></tr>
+        <tr><td>时间窗口大小</td><td>100%；40–180%</td><td>调整窗口宽高；屏幕不足时会限制尺寸，避免跑出画面。</td></tr>
+        <tr><td>时间窗口位置</td><td>右上角</td><td>支持四角、中央和自定义。</td></tr>
+        <tr><td>自定义横 / 纵位置</td><td>100 / 0；均为0–100</td><td>先把位置设为“自定义”。横向0为左、100为右；纵向0为上、100为下，范围自动扣除安全边距。</td></tr>
+        <tr><td>时钟时区</td><td>北京时间</td><td>可选城市、UTC或自定义偏移。城市时区按时区数据库处理夏令时。</td></tr>
+        <tr><td>自定义UTC偏移</td><td>480分钟；−720至840分钟</td><td>选择“自定义UTC偏移”后使用。480为UTC+8，330为UTC+5:30。</td></tr>
+        <tr><td>时间制式 / 显示秒钟</td><td>24小时制 / 显示秒</td><td>可切换12小时制或隐藏秒。</td></tr>
+        <tr><td>时间窗口鼠标立体互动</td><td>开启</td><td>鼠标经过时轻微滑动、倾斜，离开后缓动复位。</td></tr>
+        <tr><td>滑动与翻动幅度</td><td>100%；0–200%</td><td>只控制时钟互动；与背景视差强度分开。</td></tr>
+      </tbody>
+    </table></div>
+    <p>北京时间通过 <code>Asia/Shanghai</code> 计算，兼容路径使用 UTC+8；每次读取系统真实时间，不通过不断“加一秒”计时。电脑时钟本身不准时，壁纸也无法在离线条件下校准它。</p>
+    <p>时钟位置固定于屏幕，不跟随背景的大幅视差。背景视差关闭时，时钟鼠标互动仍可独立使用。</p>
+  </section>
+
+  <section id="update">
+    <h2>4. 换一段视频，或更新同一个作品</h2>
+    <h3>制作另一个新作品</h3>
+    <p>重新复制模板，使用“替换视频.cmd”，然后运行“安装为新项目.cmd”。每次安装都会建立新的独立目录，不覆盖已有项目。</p>
+    <h3>更新你已创建的同一个作品</h3>
+    <ol>
+      <li>在该作品的<strong>工作副本</strong>中运行“替换视频.cmd”，确认生成成功。</li>
+      <li>备份你要更新的那个已安装项目。暂停壁纸或暂时选择其他壁纸，避免播放中替换素材。</li>
+      <li>将工作副本的这三个文件复制到那个已安装项目的同名位置：<code>assets/video.webm</code>、<code>assets/poster.jpg</code>、<code>preview.jpg</code>。</li>
+      <li><strong>保留已安装项目自己的 project.json。</strong>它保存该作品的标题、参数定义及未来发布后生成的工坊关联。不要用模板的 project.json 覆盖它。</li>
+      <li>在 Wallpaper Engine 中重新选择该壁纸，检查新视频和预览。需要同步创意工坊时，再从这个已安装项目发布更新。</li>
+    </ol>
+    <div class="note"><p>工作副本与安装副本是两份文件。修改工作副本不会自动同步已安装副本；再次运行“安装为新项目”会创建另一个项目。</p><p><strong>只同步你明确要更新的作品。</strong>不要把新素材或模板文件覆盖到其他已有作品目录。</p></div>
+    <h3>已经有兼容的 WebM，想手动复制</h3>
+    <p>可以只复制 <code>wallpaper</code> 目录作为独立项目，将兼容视频放到 <code>assets/video.webm</code>，并同时更新 <code>assets/poster.jpg</code> 与 <code>preview.jpg</code>。缺少配套图片更新，会在启动或列表中出现旧画面。通常使用替换工具更省事，也能避免漏文件。</p>
+  </section>
+
+  <section id="files">
+    <h2>5. 哪些文件属于壁纸</h2>
+    <pre>工作文件夹/
+├─ 准备制作工具.cmd           首次下载并校验 FFmpeg / ffprobe
+├─ 替换视频.cmd               选择或拖入视频的制作工具
+├─ 安装为新项目.cmd           创建新的本地安装目录
+├─ README.md                  GitHub 项目介绍与快速开始
+├─ 说明.txt                   快速说明
+├─ 操作手册.html              本手册
+├─ tools/                     制作期依赖与脚本
+└─ wallpaper/                 真正的壁纸项目
+   ├─ index.html              运行入口
+   ├─ project.json            项目与用户设置
+   ├─ preview.jpg             列表和发布预览
+   ├─ assets/
+   │  ├─ video.webm           当前视频
+   │  └─ poster.jpg           当前视频的启动海报
+   ├─ css/                    样式
+   └─ js/                     循环、视差、时钟逻辑</pre>
+    <p><strong>安装与发布只需要 wallpaper 内的内容。</strong>不要把制作工具、源视频、备份或验证文件复制进 <code>myprojects</code> 的作品目录，也不需要把它们上传创意工坊。</p>
+    <p>模板附带的视频用于演示现有效果。使用新视频时，工具会替换对应运行素材和预览；替换源文件不涉及修改脚本。</p>
+    <p>此版本尚未为模板代码及演示素材另行指定开源许可证；公开仓库不等于自动授予开源许可。演示素材未附加开源许可。FFmpeg 按其自身许可证提供，来源及许可见 <code>tools/第三方工具说明.txt</code>。</p>
+  </section>
+
+  <section id="check">
+    <h2>6. 每次换素材后的检查</h2>
+    <ul>
+      <li>连续观察至少几个完整循环，检查是否出现黑屏、长时间定格或明显跳切。</li>
+      <li>把鼠标移动到四角，检查边缘覆盖；再检查主体是否被裁掉过多。</li>
+      <li>检查时钟是否挡住主体、日期是否完整、所选时区是否正确。</li>
+      <li>暂停并恢复壁纸，确认视频继续播放，时钟回到真实系统时间。</li>
+      <li>用你实际使用的显示器和 Wallpaper Engine 设置检查流畅度。较长、高帧率或高码率视频会增加资源消耗。</li>
+    </ul>
+    <p>双击 <code>wallpaper/index.html</code> 可以做普通浏览器预览，但鼠标桌面传递、宿主暂停、用户属性、FPS控制以及媒体格式兼容性，最终必须在 Wallpaper Engine 中确认。此前的模板验证不等于所有未来素材都已验证。</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>现象</th><th>处理</th></tr></thead>
+      <tbody>
+        <tr><td>提示缺少 FFmpeg / ffprobe</td><td>在完整解压的模板根目录联网运行“准备制作工具.cmd”，等待下载和校验完成后重试。不要只复制替换脚本到其他文件夹。</td></tr>
+        <tr><td>工具没有生成新视频</td><td>看工具错误提示，确认素材至少2秒、为SDR且文件可读。原素材不会因此被覆盖；先解决错误再重试。</td></tr>
+        <tr><td>运行仍是旧画面</td><td>确认改的是正在使用的安装目录，而非另一份工作副本。同步三个素材文件后，切换到其他壁纸再切回来。</td></tr>
+        <tr><td>视频已换，列表还是旧预览</td><td>确认 preview.jpg 也已同步，关闭再打开选择器刷新。若启动时出现旧图，检查 assets/poster.jpg。</td></tr>
+        <tr><td>普通浏览器能播，WE不能播</td><td>不要使用改名的MP4。用替换工具生成真正的VP9 WebM；确认没有丢失本地资源。</td></tr>
+        <tr><td>人物被裁掉或时钟挡脸</td><td>不同宽高比采用cover裁切。优先用与屏幕比例接近的素材，降低视差，或调整时钟的位置和大小。</td></tr>
+        <tr><td>切换应用后暂停或消失</td><td>检查 Wallpaper Engine 的应用最大化、全屏和屏幕休眠播放规则。模板遵循宿主暂停状态，不会自行更改这些规则。</td></tr>
+        <tr><td>周期结尾姿态突然变化</td><td>检查源视频首尾是否相接。模板的短淡入不能修复完全不同的镜头；可先在视频编辑软件中处理首尾。</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section id="workshop">
+    <h2>7. 以后发布到创意工坊</h2>
+    <p>模板没有预设工坊编号，不会自动发布。使用自己可发布的视频，将新项目安装并检查后，在 Wallpaper Engine 编辑器中打开<strong>该新项目</strong>，确认标题、预览、说明及内容分级，再由你决定是否发布。</p>
+    <p>第一次发布新作品会建立自己的工坊条目。以后更新同一作品时，应一直打开它原来的项目目录，并保留它的 <code>project.json</code>，使用“发布更新”。不要拿仍有关联的已发布项目直接当作另一个作品的模板。</p>
+    <p>上传完成和本机订阅更新完成是两件事。若本地项目正常、订阅版仍旧，先确认原条目更新时间与 Steam 下载队列；下载完成后重新选择订阅版。必要时关闭编辑器和选择器，再重启 Steam 刷新下载。核验重点是新视频、播放脚本与预览确实已更新，不要手工改写 Steam 的订阅缓存来冒充同步成功。</p>
+  </section>
+
+  <footer>
+    <p>循环逻辑包含片尾保护及快速暂停恢复处理。壁纸资源全部本地加载；字体使用系统中文字体回退，无CDN、网络API或额外运行程序。仅首次下载制作工具需要联网。</p>
+    <p>官方参考：<a href="https://docs.wallpaperengine.io/en/web/overview.html">Web壁纸与视频格式</a> · <a href="https://docs.wallpaperengine.io/en/web/customization/properties.html">用户属性</a> · <a href="https://docs.wallpaperengine.io/en/web/api/propertylistener.html">FPS与暂停回调</a>。这些链接仅供查阅；不联网也能阅读本手册和运行壁纸。</p>
+  </footer>
+</main>
+</body>
+</html>

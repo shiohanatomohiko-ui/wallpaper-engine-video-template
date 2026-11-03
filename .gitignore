@@ -1,0 +1,13 @@
+# Downloaded authoring dependencies
+/tools/ffmpeg/*.exe
+/tools/ffmpeg/README.txt
+/tools/.ffmpeg-setup_*/
+# Local source paths and diagnostic data
+/backups/
+/.staging/
+/validation/
+/last-replacement.json
+/last-installed-project.txt
+*.log
+Thumbs.db
+Desktop.ini
