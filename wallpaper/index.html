@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>视频壁纸 · 立体时钟</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/video-loop.js" defer></script>
+  <script src="js/wallpaper.js" defer></script>
+</head>
+<body>
+  <main id="wallpaper" aria-label="动态视频壁纸">
+    <div id="background" aria-label="视频背景">
+      <video id="video-a" src="assets/video.webm" muted playsinline preload="auto" disablepictureinpicture></video>
+      <video id="video-b" src="assets/video.webm" muted playsinline preload="auto" disablepictureinpicture></video>
+    </div>
+    <div id="clock-anchor">
+      <aside id="clock" data-position="topright" aria-label="北京时间">
+        <div id="clock-content">
+          <div class="clock-heading"><span id="clock-label">北京时间</span><span id="timezone" class="timezone">UTC+08:00</span></div>
+          <div class="clock-time"><time id="time">00:00:00</time><span id="period" hidden></span></div>
+          <div id="date" class="clock-date">正在读取时间</div>
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
+

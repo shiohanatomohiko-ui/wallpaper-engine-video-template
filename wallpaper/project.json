@@ -1,0 +1,240 @@
+{
+  "contentrating": "Everyone",
+  "description": "本地离线视频壁纸模板：双播放器平滑循环、鼠标视差、可调时区和立体玻璃时钟。随附演示素材；使用替换视频工具更换自己的视频和预览。",
+  "file": "index.html",
+  "general": {
+    "properties": {
+      "clock3d": {
+        "index": 11,
+        "order": 111,
+        "text": "启用时间窗口鼠标立体互动",
+        "type": "bool",
+        "value": true
+      },
+      "clockmotion": {
+        "editable": true,
+        "index": 12,
+        "max": 200,
+        "min": 0,
+        "order": 112,
+        "text": "时间窗口滑动与翻动幅度（%）",
+        "type": "slider",
+        "value": 100
+      },
+      "clockoffset": {
+        "editable": true,
+        "index": 5,
+        "max": 840,
+        "min": -720,
+        "order": 105,
+        "text": "自定义 UTC 偏移（分钟，480 = +08:00）",
+        "type": "slider",
+        "value": 480
+      },
+      "clockopacity": {
+        "editable": true,
+        "index": 6,
+        "max": 95,
+        "min": 5,
+        "order": 106,
+        "text": "时间窗口不透明度（%，越低越透明）",
+        "type": "slider",
+        "value": 44
+      },
+      "clockposition": {
+        "index": 8,
+        "options": [
+          {
+            "label": "右上角（默认）",
+            "value": "topright"
+          },
+          {
+            "label": "左上角",
+            "value": "topleft"
+          },
+          {
+            "label": "右下角",
+            "value": "bottomright"
+          },
+          {
+            "label": "左下角",
+            "value": "bottomleft"
+          },
+          {
+            "label": "屏幕中央",
+            "value": "center"
+          },
+          {
+            "label": "自定义（使用下方横纵位置）",
+            "value": "custom"
+          }
+        ],
+        "order": 108,
+        "text": "时间窗口位置",
+        "type": "combo",
+        "value": "topright"
+      },
+      "clockscale": {
+        "editable": true,
+        "index": 7,
+        "max": 180,
+        "min": 40,
+        "order": 107,
+        "text": "时间窗口大小（%，100 = 新版大窗口）",
+        "type": "slider",
+        "value": 100
+      },
+      "clocktimezone": {
+        "index": 4,
+        "options": [
+          {
+            "label": "北京时间（默认）",
+            "value": "Asia/Shanghai"
+          },
+          {
+            "label": "东京",
+            "value": "Asia/Tokyo"
+          },
+          {
+            "label": "新加坡",
+            "value": "Asia/Singapore"
+          },
+          {
+            "label": "迪拜",
+            "value": "Asia/Dubai"
+          },
+          {
+            "label": "印度",
+            "value": "Asia/Kolkata"
+          },
+          {
+            "label": "伦敦",
+            "value": "Europe/London"
+          },
+          {
+            "label": "巴黎",
+            "value": "Europe/Paris"
+          },
+          {
+            "label": "纽约",
+            "value": "America/New_York"
+          },
+          {
+            "label": "洛杉矶",
+            "value": "America/Los_Angeles"
+          },
+          {
+            "label": "悉尼",
+            "value": "Australia/Sydney"
+          },
+          {
+            "label": "奥克兰",
+            "value": "Pacific/Auckland"
+          },
+          {
+            "label": "UTC 协调世界时",
+            "value": "UTC"
+          },
+          {
+            "label": "自定义 UTC 偏移（使用下方分钟值）",
+            "value": "custom"
+          }
+        ],
+        "order": 104,
+        "text": "时钟时区（城市自动处理夏令时）",
+        "type": "combo",
+        "value": "Asia/Shanghai"
+      },
+      "clockvisible": {
+        "index": 3,
+        "order": 103,
+        "text": "显示时间窗口",
+        "type": "bool",
+        "value": true
+      },
+      "clockx": {
+        "editable": true,
+        "index": 9,
+        "max": 100,
+        "min": 0,
+        "order": 109,
+        "text": "自定义横向位置（0 = 左，100 = 右）",
+        "type": "slider",
+        "value": 100
+      },
+      "clocky": {
+        "editable": true,
+        "index": 10,
+        "max": 100,
+        "min": 0,
+        "order": 110,
+        "text": "自定义纵向位置（0 = 上，100 = 下）",
+        "type": "slider",
+        "value": 0
+      },
+      "hourformat": {
+        "index": 13,
+        "options": [
+          {
+            "label": "24 小时制",
+            "value": "24"
+          },
+          {
+            "label": "12 小时制",
+            "value": "12"
+          }
+        ],
+        "order": 113,
+        "text": "时间制式",
+        "type": "combo",
+        "value": "24"
+      },
+      "parallaxenabled": {
+        "index": 0,
+        "order": 100,
+        "text": "启用鼠标视差",
+        "type": "bool",
+        "value": true
+      },
+      "schemecolor": {
+        "order": 0,
+        "text": "ui_browse_properties_scheme_color",
+        "type": "color",
+        "value": "0 0 0"
+      },
+      "showseconds": {
+        "index": 14,
+        "order": 114,
+        "text": "显示秒钟",
+        "type": "bool",
+        "value": true
+      },
+      "smoothing": {
+        "editable": true,
+        "index": 2,
+        "max": 300,
+        "min": 60,
+        "order": 102,
+        "text": "平滑程度（毫秒）",
+        "type": "slider",
+        "value": 120
+      },
+      "strength": {
+        "editable": true,
+        "index": 1,
+        "max": 200,
+        "min": 0,
+        "order": 101,
+        "text": "视差强度（%）",
+        "type": "slider",
+        "value": 100
+      }
+    }
+  },
+  "preview": "preview.jpg",
+  "ratingsex": "none",
+  "ratingviolence": "none",
+  "tags": [],
+  "title": "通用视频壁纸模板 · 视差与立体时钟",
+  "type": "Web"
+}
