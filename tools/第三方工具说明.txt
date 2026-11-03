@@ -1,0 +1,23 @@
+制作依赖说明
+
+壁纸运行代码和资源均在 wallpaper 中，不依赖互联网、外部字体或额外程序。
+FFmpeg 与 ffprobe 只用于检查和转换素材，以及提取海报/预览图。
+公开项目不附带这两个可执行程序。首次需要制作功能时，运行“准备制作工具.cmd”；工具下载完成后可离线制作。
+
+固定构建：Gyan FFmpeg 9.0.2 essentials，Windows x64，GPLv3。
+构建主页：https://www.gyan.dev/ffmpeg/builds/
+上游：https://ffmpeg.org/
+源码提交：https://github.com/FFmpeg/FFmpeg/commit/946fcce07b
+下载地址：https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-9.0.2-essentials_build.zip
+ZIP SHA-256：60f467265b1e312373dbcd92200c2618a74850f98d3d078e94296bb3fa2047ba
+校验来源：https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-9.0.2-essentials_build.zip.sha256
+
+准备工具固定下载地址并核对哈希，仅提取指定的两个程序、许可证和构建说明；不更改 PATH、执行策略或系统设置。
+也可使用 tools/Setup-FFmpeg.ps1 -ArchivePath 指定从上述来源取得的同版本官方 ZIP。
+FFmpeg 的许可证见 ffmpeg/LICENSE；下载后的构建说明见 ffmpeg/README.txt。
+该第三方许可证不代表本模板代码或演示素材已采用 GPLv3。
+
+Wallpaper Engine 官方参考
+https://docs.wallpaperengine.io/en/web/overview.html
+https://docs.wallpaperengine.io/en/web/customization/properties.html
+https://docs.wallpaperengine.io/en/web/api/propertylistener.html
